@@ -1,0 +1,108 @@
+.auth-container {
+  max-width: 400px;
+  margin: 4rem auto;
+  background: #ffffff;
+  padding: 2.5rem 2.8rem;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgb(0 0 0 / 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.auth-container h2 {
+  margin: 0 0 1.5rem 0;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #1e40af; 
+  text-align: center;
+}
+
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.auth-container label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  color: #374151;
+  font-size: 1rem;
+  gap: 0.35rem;
+}
+
+.auth-container input[type="text"],
+.auth-container input[type="password"],
+.auth-container select {
+  padding: 0.55rem 0.85rem;
+  font-size: 1rem;
+  border: 1.7px solid #cbd5e1; 
+  border-radius: 10px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.auth-container input[type="text"]:focus,
+.auth-container input[type="password"]:focus,
+.auth-container select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 6px #2563eb88;
+}
+
+.auth-container button {
+  background-color: #2563eb;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.15rem;
+  padding: 0.7rem 0;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.auth-container button:hover {
+  background-color: #1d4ed8;
+}
+
+.error {
+  color: #dc2626; 
+  font-weight: 600;
+  text-align: center;
+  margin: 0.5rem 0 0;
+}
+
+.notification {
+  color: #2563eb;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 0 0.8rem 0;
+}
+
+.link {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  text-align: center;
+  color: #4b5563;
+}
+
+.link a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+  transition: text-decoration 0.3s ease;
+}
+
+.link a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+    margin: 2rem 1rem;
+    padding: 2rem 1.5rem;
+  }
+}

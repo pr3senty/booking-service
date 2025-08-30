@@ -1,0 +1,138 @@
+.home-container {
+  max-width: 1000px;
+  margin: 3rem auto 5rem;
+  padding: 0 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #334155;
+  font-size: 18px;
+}
+
+.home-container h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  padding: 2rem 2.5rem;
+  border-radius: 20px;
+  border: 2.5px solid #3b82f6; 
+  box-shadow: 0 6px 18px rgb(59 130 246 / 0.25);
+  font-size: 1.1rem;
+  color: #1e40af;
+  user-select: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.filter-form:hover,
+.filter-form:focus-within {
+  box-shadow: 0 8px 28px rgb(59 130 246 / 0.45);
+}
+
+.filter-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  min-width: 150px;
+}
+
+.filter-form input[type="number"],
+.filter-form select {
+  margin-top: 0.5rem;
+  padding: 0.55rem 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  color: #334155;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.filter-form input[type="number"]:focus,
+.filter-form select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 7px #2563ebaa;
+}
+
+.filter-form button {
+  align-self: flex-end;
+  padding: 0.65rem 1.8rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-form button:hover {
+  background-color: #1e40af;
+}
+
+.error-message,
+.empty-message {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ef4444;
+  margin-top: 2rem;
+}
+
+.coworking-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem 1.8rem; 
+  padding-bottom: 4rem; 
+}
+
+.coworking-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 5px 18px rgb(0 0 0 / 0.12);
+  padding: 1.8rem 1.6rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  color: #1e293b;
+  border: 2.5px solid transparent;
+  font-size: 1.15rem;
+  user-select: none;
+}
+
+.coworking-card:hover,
+.coworking-card:focus-visible {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgb(0 0 0 / 0.18);
+  border-color: #3b82f6;
+  outline: none;
+}
+
+.coworking-card h3 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1e40af;
+}
+
+.coworking-card p {
+  margin: 0;
+  font-size: 1.15rem;
+  color: #475569;
+  line-height: 1.4;
+}
+
+.coworking-card strong {
+  color: #334155;
+  font-weight: 700;
+}

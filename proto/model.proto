@@ -1,0 +1,56 @@
+syntax = "proto3";
+
+package main;
+
+option go_package = "edu.centraluniversity/internal/modelpb";
+option java_package = "edu.centraluniversity";
+
+
+enum UserRole {
+    TYPE_UNSPECIFIED = 0;
+    GUEST = 1;
+    STUDENT = 2;
+    STAFF = 3;
+    ADMIN = 4;
+}
+
+
+message User {
+    int64 id = 1;
+    UserRole role = 2;
+    string surname = 3;
+    string personName = 4;
+    string patronymic = 5;
+    string username = 6;
+    string password = 7;
+}
+
+message UserCredentials {
+    string username = 1;
+    string password = 2;
+}
+
+message JwtToken {
+    string value = 1;
+}
+
+message UserInfo {
+    int64 id = 1;
+    UserRole role = 2;
+    string surname = 3;
+    string personName = 4;
+    string patronymic = 5;
+}
+
+message Result {
+    User user_data = 1;
+    JwtToken jwt_token = 2;
+}
+
+message Successful {
+    bool value = 1;
+}
+
+message UserId {
+    int64 value = 1;
+}

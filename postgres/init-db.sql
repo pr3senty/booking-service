@@ -1,0 +1,2 @@
+CREATE DATABASE go_db;
+CREATE DATABASE java_db;

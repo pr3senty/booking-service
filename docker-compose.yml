@@ -1,0 +1,56 @@
+version: '3.8'
+
+services:
+  java-service:
+    build: 
+      context: .
+      dockerfile: backend/java-service/Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      - GRPC_AUTH_SERVICE_HOST=go-service
+      - GRPC_AUTH_SERVICE_PORT=8081
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/java_db
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+
+  go-service:
+    build: ./backend/go-service
+    ports:
+      - "8081:8081"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_USER=postgres
+      - DB_PASSWORD=postgres
+      - DB_NAME=go_db
+      - SERVER_HOST=0.0.0.0
+      - SERVER_PORT=8081
+      - JWT_SECRET=!S/Kx=B8Dr27c[uaSgr-rsOaox~JvumtI=Ya,^=bWOwNiHX99k;u[?`9>H`Ruqs
+
+  frontend:
+    build: 
+      context: ./frontend/react-app
+      args:
+        - VITE_API_URL=http://localhost:8080
+    ports:
+      - "3000:3000"
+
+  db:
+    image: postgres:15
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./postgres/init-db.sql:/docker-entrypoint-initdb.d/init-db.sql
+      - postgres_data:/var/lib/postgresql/data
+  
+volumes:
+  postgres_data:
+

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package main;
+
+option go_package = "edu.centraluniversity/internal/serverpb";
+option java_package = "edu.centraluniversity";
+
+import "model.proto";
+
+service Auth {
+
+    rpc SignUp(User) returns (Result);
+
+    rpc SignIn(UserCredentials) returns (Result);
+
+    rpc SignInByJwt(JwtToken) returns (Result);
+
+    rpc UpdateUser(User) returns (Result);
+
+    rpc DeleteUser(UserId) returns (Successful);
+
+    rpc GetUserInfo(UserId) returns (UserInfo);
+}

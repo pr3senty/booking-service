@@ -1,0 +1,58 @@
+.coworking-editor {
+  padding: 1rem;
+  background-color: #fefefe;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.coworking-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.coworking-form input,
+.coworking-form select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.coworking-form .error {
+  color: #d9534f;
+  font-size: 0.9rem;
+  margin-top: -0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.coworking-form .buttons {
+  margin-top: 1rem;
+}
+
+.coworking-form button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #28a745;
+  color: white;
+  margin-right: 0.5rem;
+}
+
+.coworking-form button:hover {
+  background-color: #218838;
+}
+
+.coworking-form .delete-btn {
+  background-color: #dc3545;
+}
+
+.coworking-form .delete-btn:hover {
+  background-color: #c82333;
+}
